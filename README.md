@@ -64,3 +64,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## **Cuplikan Layar**  
+
+Berikut adalah beberapa **cuplikan layar** dari beberapa fitur website ini:  
+
+### Cuplikan Layar 1: **Halaman Utama**
+![Cuplikan Layar 1](public/tampilan-awal.png)
+
+---
+
+### Cuplikan Layar 2: **Halaman ketika pengguna mengatakan perintah matikan lampu**
+![Cuplikan Layar 2](public/matikan-lampu.png)
+
+---
+
+### Cuplikan Layar 3: **Halaman ketika pengguna mengatakan perintah musim salju**
+![Cuplikan Layar 3](public/musim-salju.png)
+
+
