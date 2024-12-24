@@ -1,0 +1,189 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dan font */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #6a11cb; /* Warna latar belakang default */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 1s ease-in-out; /* Animasi perubahan warna latar belakang */
+}
+
+/* Container untuk konten */
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Judul */
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Tombol untuk mulai dan menghentikan perekaman */
+button {
+    background-color: #2575fc;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a11cb;
+    transform: translateY(-2px);
+}
+
+/* Textarea untuk input suara */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+textarea:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+/* Card untuk menampilkan pesan */
+.message-card {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: none; /* Sembunyikan card awalnya */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.message-card.success {
+    background-color: #28a745; /* Hijau untuk sukses */
+    color: white;
+}
+
+.message-card.error {
+    background-color: #dc3545; /* Merah untuk error */
+    color: white;
+}
+
+/* Efek salju */
+.snowflakes {
+    position: fixed; /* Agar tetap berada di layar meskipun halaman di-scroll */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Lebar penuh layar */
+    height: 100vh; /* Tinggi penuh layar */
+    pointer-events: none; /* Agar salju tidak mengganggu interaksi halaman */
+    z-index: 9999; /* Menempatkan di atas konten lain */
+    overflow: hidden;
+}
+
+/* Butiran salju */
+.snowflake {
+    position: absolute;
+    top: -10px; /* Mulai dari atas */
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall 10s linear infinite;
+}
+
+/* Animasi salju */
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10px); /* Mulai dari atas */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Jatuh hingga ke bawah */
+        opacity: 0; /* Menghilang saat jatuh */
+    }
+}
+
+/* Variasi ukuran dan durasi animasi untuk efek salju yang alami */
+.snowflake:nth-child(odd) {
+    width: 12px;
+    height: 12px;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(even) {
+    width: 8px;
+    height: 8px;
+    animation-duration: 12s;
+}
+
+.snowflake:nth-child(3n) {
+    width: 6px;
+    height: 6px;
+    animation-duration: 15s;
+}
+
+.snowflake:nth-child(4n) {
+    width: 15px;
+    height: 15px;
+    animation-duration: 10s;
+}
+
+/* Membuat butiran salju muncul secara acak di seluruh layar */
+.snowflake {
+    left: calc(100% * (random())); /* Posisi horizontal acak */
+    animation-duration: calc(
+        8s + random() * 7s
+    ); /* Durasi acak untuk pergerakan salju */
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* Latar belakang musim salju (dingin) */
+body.snow-active {
+    background: linear-gradient(
+        to bottom,
+        #00aaff,
+        #ffffff
+    ); /* Gradien biru ke putih */
+}
+
+/* Latar belakang normal */
+body.normal {
+    background: #6a11cb; /* Warna latar belakang default */
+    color: #fff; /* Warna teks default */
+}
