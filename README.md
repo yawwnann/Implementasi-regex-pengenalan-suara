@@ -74,7 +74,7 @@ Berikut adalah beberapa **cuplikan layar** dari beberapa fitur website ini:
 
 ---
 
-### Cuplikan Layar 2: **Halaman ketika pengguna mengatakan perintah matikan lampu**
+### Cuplikan Layar 2: **Halaman ketika pengguna mengatakan perintah matikan lampuu**
 ![Cuplikan Layar 2](public/matikan-lampu.png)
 
 ---
